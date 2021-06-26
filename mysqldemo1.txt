@@ -1,0 +1,43 @@
+
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| performance_schema |
+| sys                |
++--------------------+
+4 rows in set (0.00 sec)
+
+mysql> create database nodedb;
+Query OK, 1 row affected (0.29 sec)
+
+mysql> use nodedb
+Database changed
+
+mysql> create table products(p_id integer, p_name varchar(20), p_cost integer);
+Query OK, 0 rows affected (1.87 sec)
+
+mysql> insert into products values(111,'p_one',10000);
+Query OK, 1 row affected (0.30 sec)
+
+mysql> select * from products;
++------+--------+--------+
+| p_id | p_name | p_cost |
++------+--------+--------+
+|  111 | p_one  |  10000 |
++------+--------+--------+
+1 row in set (0.00 sec)
+
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| nodedb             |
+| performance_schema |
+| sys                |
++--------------------+
+5 rows in set (0.00 sec)
